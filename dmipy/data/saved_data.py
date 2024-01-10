@@ -95,24 +95,24 @@ def duval_cat_spinal_cord_2d():
     class Histology:
         def __init__(self):
             self.h1_axonEquivDiameter = nib.load(
-                join(data_folder, '1_axonEquivDiameter.nii')).get_data()
+                join(data_folder, '1_axonEquivDiameter.nii')).get_fdata()
             self.h2_axonEquivDiameter_std = nib.load(
-                join(data_folder, '2_axonEquivDiameter_std.nii')).get_data()
+                join(data_folder, '2_axonEquivDiameter_std.nii')).get_fdata()
             self.h3_axonEquivDiameter_axonvolumeCorrected = nib.load(
                 join(data_folder, '3_axonEquivDiameter_axonvolumeCorrected.nii'
-                     )).get_data()
-            self.h4_fr = nib.load(join(data_folder, '4_fr.nii')).get_data()
+                     )).get_fdata()
+            self.h4_fr = nib.load(join(data_folder, '4_fr.nii')).get_fdata()
             self.h5_MyelinVolumeFraction = nib.load(
-                join(data_folder, '5_MyelinVolumeFraction.nii')).get_data()
+                join(data_folder, '5_MyelinVolumeFraction.nii')).get_fdata()
             self.h6_gRatio = nib.load(
-                join(data_folder, '6_gRatio.nii')).get_data()
+                join(data_folder, '6_gRatio.nii')).get_fdata()
             self.h7_Number_axons = nib.load(
-                join(data_folder, '7_Number_axons.nii')).get_data()
+                join(data_folder, '7_Number_axons.nii')).get_fdata()
 
     class DuvalSpinalCordData2D:
         def __init__(self):
             data_name = "tanguy_spinal_cord_2D.nii.gz"
-            self.signal = nib.load(join(data_folder, data_name)).get_data()
+            self.signal = nib.load(join(data_folder, data_name)).get_fdata()
             self.histology = Histology()
             self.mask = (self.histology.h4_fr > 0)[..., None]
 

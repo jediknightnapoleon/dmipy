@@ -1,0 +1,23 @@
+digraph "Model Setup" {
+	"3b08f066-4b68-45cb-be4c-429363f6dab8" [label=MultiCompartmentModel]
+	"8bfc6f05-e6bc-4bdd-9e8d-7bd3fa5d8ea6" [label=G1Ball]
+	"8bfc6f05-e6bc-4bdd-9e8d-7bd3fa5d8ea6" -> "3b08f066-4b68-45cb-be4c-429363f6dab8"
+	"9265663b-b226-4532-9cb1-c71efda837ff" [label=lambda_iso]
+	"9265663b-b226-4532-9cb1-c71efda837ff" -> "8bfc6f05-e6bc-4bdd-9e8d-7bd3fa5d8ea6"
+	"3f25eb26-44cd-4835-9949-b2d4c5d110cf" [label=DD1GammaDistributed]
+	"3f25eb26-44cd-4835-9949-b2d4c5d110cf" -> "3b08f066-4b68-45cb-be4c-429363f6dab8"
+	"fd6b888b-9464-4f94-9553-911620e1354d" [label=C3CylinderCallaghanApproximation]
+	"fd6b888b-9464-4f94-9553-911620e1354d" -> "3f25eb26-44cd-4835-9949-b2d4c5d110cf"
+	"e9aed370-de9a-4ae1-9892-7fc34eb96a83" [label=mu]
+	"e9aed370-de9a-4ae1-9892-7fc34eb96a83" -> "fd6b888b-9464-4f94-9553-911620e1354d"
+	"8105746a-989c-4922-b6f0-5a217b45909c" [label=lambda_par]
+	"8105746a-989c-4922-b6f0-5a217b45909c" -> "fd6b888b-9464-4f94-9553-911620e1354d"
+	"ab28265b-d2a7-4984-ac85-c1545a00b1f5" [label=diameter]
+	"ab28265b-d2a7-4984-ac85-c1545a00b1f5" -> "fd6b888b-9464-4f94-9553-911620e1354d"
+	"a700406d-7789-4eba-8a46-d27757e5d2a0" [label=DD1Gamma]
+	"a700406d-7789-4eba-8a46-d27757e5d2a0" -> "3f25eb26-44cd-4835-9949-b2d4c5d110cf"
+	"c69315f0-2876-4c88-8cd4-b5ce31fbc21b" [label=alpha]
+	"c69315f0-2876-4c88-8cd4-b5ce31fbc21b" -> "a700406d-7789-4eba-8a46-d27757e5d2a0"
+	"f39ac49d-ab87-4b9f-9515-50e35d6c9f12" [label=beta]
+	"f39ac49d-ab87-4b9f-9515-50e35d6c9f12" -> "a700406d-7789-4eba-8a46-d27757e5d2a0"
+}
