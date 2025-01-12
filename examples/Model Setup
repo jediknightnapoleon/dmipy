@@ -1,23 +1,23 @@
 digraph "Model Setup" {
-	"3b08f066-4b68-45cb-be4c-429363f6dab8" [label=MultiCompartmentModel]
-	"8bfc6f05-e6bc-4bdd-9e8d-7bd3fa5d8ea6" [label=G1Ball]
-	"8bfc6f05-e6bc-4bdd-9e8d-7bd3fa5d8ea6" -> "3b08f066-4b68-45cb-be4c-429363f6dab8"
-	"9265663b-b226-4532-9cb1-c71efda837ff" [label=lambda_iso]
-	"9265663b-b226-4532-9cb1-c71efda837ff" -> "8bfc6f05-e6bc-4bdd-9e8d-7bd3fa5d8ea6"
-	"3f25eb26-44cd-4835-9949-b2d4c5d110cf" [label=DD1GammaDistributed]
-	"3f25eb26-44cd-4835-9949-b2d4c5d110cf" -> "3b08f066-4b68-45cb-be4c-429363f6dab8"
-	"fd6b888b-9464-4f94-9553-911620e1354d" [label=C3CylinderCallaghanApproximation]
-	"fd6b888b-9464-4f94-9553-911620e1354d" -> "3f25eb26-44cd-4835-9949-b2d4c5d110cf"
-	"e9aed370-de9a-4ae1-9892-7fc34eb96a83" [label=mu]
-	"e9aed370-de9a-4ae1-9892-7fc34eb96a83" -> "fd6b888b-9464-4f94-9553-911620e1354d"
-	"8105746a-989c-4922-b6f0-5a217b45909c" [label=lambda_par]
-	"8105746a-989c-4922-b6f0-5a217b45909c" -> "fd6b888b-9464-4f94-9553-911620e1354d"
-	"ab28265b-d2a7-4984-ac85-c1545a00b1f5" [label=diameter]
-	"ab28265b-d2a7-4984-ac85-c1545a00b1f5" -> "fd6b888b-9464-4f94-9553-911620e1354d"
-	"a700406d-7789-4eba-8a46-d27757e5d2a0" [label=DD1Gamma]
-	"a700406d-7789-4eba-8a46-d27757e5d2a0" -> "3f25eb26-44cd-4835-9949-b2d4c5d110cf"
-	"c69315f0-2876-4c88-8cd4-b5ce31fbc21b" [label=alpha]
-	"c69315f0-2876-4c88-8cd4-b5ce31fbc21b" -> "a700406d-7789-4eba-8a46-d27757e5d2a0"
-	"f39ac49d-ab87-4b9f-9515-50e35d6c9f12" [label=beta]
-	"f39ac49d-ab87-4b9f-9515-50e35d6c9f12" -> "a700406d-7789-4eba-8a46-d27757e5d2a0"
+	"a7884d46-f4fd-4d7c-ad7e-00c9f26e1162" [label=MultiCompartmentModel]
+	"ad0faeab-fc24-4b27-bc58-e1f67d634439" [label=G1Ball]
+	"ad0faeab-fc24-4b27-bc58-e1f67d634439" -> "a7884d46-f4fd-4d7c-ad7e-00c9f26e1162"
+	"065c6504-c284-4c5b-a738-a0fa071e6160" [label=lambda_iso]
+	"065c6504-c284-4c5b-a738-a0fa071e6160" -> "ad0faeab-fc24-4b27-bc58-e1f67d634439"
+	"f06fed45-9d73-4067-a00c-5d88835a2007" [label=DD1GammaDistributed]
+	"f06fed45-9d73-4067-a00c-5d88835a2007" -> "a7884d46-f4fd-4d7c-ad7e-00c9f26e1162"
+	"e0765b5d-114d-4bc2-87a7-013a82cd49a2" [label=C4CylinderGaussianPhaseApproximation]
+	"e0765b5d-114d-4bc2-87a7-013a82cd49a2" -> "f06fed45-9d73-4067-a00c-5d88835a2007"
+	"bc5b59b2-34d3-4988-8f57-3bd50401e89a" [label=mu]
+	"bc5b59b2-34d3-4988-8f57-3bd50401e89a" -> "e0765b5d-114d-4bc2-87a7-013a82cd49a2"
+	"7a5d3fad-a6b5-47f5-9350-9ac6f1a846aa" [label=lambda_par]
+	"7a5d3fad-a6b5-47f5-9350-9ac6f1a846aa" -> "e0765b5d-114d-4bc2-87a7-013a82cd49a2"
+	"c3a99514-274a-40b8-9a76-91ec0e7669ab" [label=diameter]
+	"c3a99514-274a-40b8-9a76-91ec0e7669ab" -> "e0765b5d-114d-4bc2-87a7-013a82cd49a2"
+	"dfffdd7b-ef79-4d43-a3c8-957c0c39f387" [label=DD1Gamma]
+	"dfffdd7b-ef79-4d43-a3c8-957c0c39f387" -> "f06fed45-9d73-4067-a00c-5d88835a2007"
+	"59e9d3a2-de09-4730-bf36-59420436fd5f" [label=alpha]
+	"59e9d3a2-de09-4730-bf36-59420436fd5f" -> "dfffdd7b-ef79-4d43-a3c8-957c0c39f387"
+	"bee833e0-447e-41b8-aabc-54b93bbfc409" [label=beta]
+	"bee833e0-447e-41b8-aabc-54b93bbfc409" -> "dfffdd7b-ef79-4d43-a3c8-957c0c39f387"
 }

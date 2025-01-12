@@ -25,12 +25,6 @@ Requires: scipy
 Requires: numpy(>=1.13)
 Description-Content-Type: text/markdown
 License-File: LICENSE
-Requires-Dist: pathlib
-Requires-Dist: boto
-Requires-Dist: cvxpy
-Requires-Dist: dipy
-Requires-Dist: scipy
-Requires-Dist: numpy>=1.13
 
 [![Build Status](https://travis-ci.org/AthenaEPI/dmipy.svg?branch=master)](https://travis-ci.org/AthenaEPI/dmipy)
 [![codecov](https://codecov.io/gh/AthenaEPI/dmipy/branch/master/graph/badge.svg)](https://codecov.io/gh/AthenaEPI/dmipy)

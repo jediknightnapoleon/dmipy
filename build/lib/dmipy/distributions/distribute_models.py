@@ -878,7 +878,7 @@ class DD1GammaDistributed(DistributedModel, AnisotropicSignalModelProperties):
     _model_type = 'SpatialDistributedModel'
 
     def __init__(self, models, parameter_links=None,
-                 target_parameter='diameter'):
+                 target_parameter='diameter', alpha=1, beta=1):
         self.models = models
         self._set_required_acquisition_parameters()
         self.target_parameter = target_parameter
@@ -891,7 +891,7 @@ class DD1GammaDistributed(DistributedModel, AnisotropicSignalModelProperties):
             self.parameter_links = []
 
         self.normalization = models[0].parameter_types[target_parameter]
-        self.distribution = distributions.DD1Gamma(
+        self.distribution = distributions.DD1Gamma(alpha, beta,
             normalization=self.normalization)
 
         _models_and_distribution = list(self.models)
