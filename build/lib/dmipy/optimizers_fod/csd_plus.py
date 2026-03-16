@@ -1,5 +1,5 @@
 import numpy as np
-import pkg_resources
+from importlib.resources import files
 from os.path import join
 from packaging.version import Version
 from dipy.data import get_sphere, HemiSphere
@@ -89,9 +89,7 @@ class CsdPlusOptimizer:
 
         # Load the SOS constraint matrices
         # Currently defined up to sh_order = 10
-        CONSTRAINTS_PATH = pkg_resources.resource_filename(
-            'dmipy', 'data/sos_constraints'
-        )
+        CONSTRAINTS_PATH = str(files('dmipy') / 'data' / 'sos_constraints')
         mf = join(CONSTRAINTS_PATH, 'sh_constraint_' + str(sh_order) + '.csv')
         coo = np.loadtxt(mf, delimiter=",")
         pos = coo[:, :3].astype(int)

@@ -3,7 +3,7 @@
 Document Module
 '''
 from __future__ import division
-import pkg_resources
+from importlib.resources import files
 from os.path import join
 
 import numpy as np
@@ -21,15 +21,10 @@ hemisphere = HemiSphere(phi=sphere.phi, theta=sphere.theta)
 
 numba, have_numba, _ = optional_package("numba")
 
-GRADIENT_TABLES_PATH = pkg_resources.resource_filename(
-    'dmipy', 'data/gradient_tables'
-)
-SIGNAL_MODELS_PATH = pkg_resources.resource_filename(
-    'dmipy', 'signal_models'
-)
-DATA_PATH = pkg_resources.resource_filename(
-    'dmipy', 'data'
-)
+GRADIENT_TABLES_PATH = str(files('dmipy') / 'data' / 'gradient_tables')
+SIGNAL_MODELS_PATH = str(files('dmipy') / 'data' / 'signal_models')
+DATA_PATH = str(files('dmipy') / 'data')
+
 SPHERE_CARTESIAN = np.loadtxt(
     join(GRADIENT_TABLES_PATH, 'sphere_with_cap.txt')
 )

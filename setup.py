@@ -3,14 +3,14 @@ from setuptools import setup, find_packages
 PACKAGES = find_packages()
 
 # Get version and release info, which is all stored in dmipy/version.py
-ver_file = os.path.join('dmipy', 'version.py')
+ver_file = os.path.join('/Users/zxh380/Library/CloudStorage/OneDrive-Nexus365/projects/dmipy/dmipy', 'version.py')
 with open(ver_file) as f:
     exec(f.read())
 
-with open ('requirements.txt', "r") as f:
+with open ('/Users/zxh380/Library/CloudStorage/OneDrive-Nexus365/projects/dmipy/requirements.txt', "r") as f:
     requirements=f.read().splitlines()[::-1]
 
-with open('README.md', 'r') as f:
+with open('/Users/zxh380/Library/CloudStorage/OneDrive-Nexus365/projects/dmipy/README.md', 'r') as f:
     long_description = f.read()
 
 opts = dict(name=NAME,

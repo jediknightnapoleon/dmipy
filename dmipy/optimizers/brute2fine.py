@@ -1,14 +1,12 @@
 from scipy.optimize import brute, minimize
-import pkg_resources
+from importlib.resources import files
 from ..utils.utils import cart2mu
 import numpy as np
 from dipy.utils.optpkg import optional_package
 
 numba, have_numba, _ = optional_package("numba")
 
-SPHERES_PATH = pkg_resources.resource_filename(
-    'dmipy', 'data/spheres'
-)
+SPHERES_PATH = str(files('dmipy') / 'data' / 'spheres')
 
 __all__ = [
     'GlobalBruteOptimizer',

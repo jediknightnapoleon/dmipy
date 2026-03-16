@@ -9,7 +9,7 @@ from time import time
 from uuid import uuid4
 
 import numpy as np
-import pkg_resources
+from importlib.resources import files
 from dipy.utils.optpkg import optional_package
 
 from .fitted_modeling_framework import (
@@ -41,12 +41,8 @@ if have_pathos:
     import pathos.pools as pp
     from pathos.helpers import cpu_count
 
-GRADIENT_TABLES_PATH = pkg_resources.resource_filename(
-    'dmipy', 'data/gradient_tables'
-)
-SIGNAL_MODELS_PATH = pkg_resources.resource_filename(
-    'dmipy', 'signal_models'
-)
+GRADIENT_TABLES_PATH = str(files('dmipy') / 'data' / 'gradient_tables')
+SIGNAL_MODELS_PATH = str(files('dmipy') / 'signal_models')
 
 __all__ = [
     'ModelProperties',
