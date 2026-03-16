@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.2
 Name: dmipy
 Version: 1.0.5
 Summary: dmipy: diffusion microstructure imaging in python
@@ -25,6 +25,25 @@ Requires: scipy
 Requires: numpy(>=1.13)
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Requires-Dist: pathlib
+Requires-Dist: boto
+Requires-Dist: cvxpy
+Requires-Dist: dipy
+Requires-Dist: scipy
+Requires-Dist: numpy>=1.13
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: platform
+Dynamic: requires
+Dynamic: requires-dist
+Dynamic: summary
 
 [![Build Status](https://travis-ci.org/AthenaEPI/dmipy.svg?branch=master)](https://travis-ci.org/AthenaEPI/dmipy)
 [![codecov](https://codecov.io/gh/AthenaEPI/dmipy/branch/master/graph/badge.svg)](https://codecov.io/gh/AthenaEPI/dmipy)
